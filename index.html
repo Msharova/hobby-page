@@ -54,14 +54,14 @@
       }
       button:hover {
         cursor: pointer;
-        background: white;
+        background: transparent;
         border: 1px solid black;
         transition: all 150ms ease-in-out;
         color: var(--dark-color);
       }
       .header {
         display: flex;
-        justify-content: end;
+        justify-content: center;
       }
       .intro-picture {
         transition: all 150ms ease-in-out;
@@ -119,9 +119,48 @@
         max-width: 700px;
         text-align: center;
       }
+      .dark-theme {
+        background: linear-gradient(
+          109.6deg,
+          rgb(0, 0, 0) 11.2%,
+          rgb(11, 132, 145) 91.1%
+        );
+      }
+      .dark-theme .header button {
+        background: rgb(66, 92, 83);
+        color: white;
+        border: 1px solid white;
+        transition: all 150ms ease-in-out;
+      }
+      .dark-theme .header button:hover {
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+      }
+      .dark-theme .container {
+        background: rgb(0, 0, 0, 0.5);
+        color: white;
+      }
+      .dark-theme .container h1 {
+        background: black;
+      }
+      .dark-theme .container .wiki-link a {
+        background: rgb(66, 92, 83);
+        color: white;
+      }
+      .dark-theme .container .wiki-link a:hover {
+        background: transparent;
+        border: 1px solid white;
+      }
+      .dark-theme .footer {
+        color: white;
+      }
+      .dark-theme .footer a {
+        color: rgb(172, 172, 255);
+      }
     </style>
   </head>
-  <body>
+  <body class="">
     <div class="header">
       <button>Dark theme</button>
     </div>
@@ -191,5 +230,22 @@
         >Maria Sharova</a
       >
     </div>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        let buttonText = document.querySelector("button");
+
+        if (body.classList.contains("dark-theme")) {
+          body.classList.remove("dark-theme");
+          buttonText.innerHTML = "Dark theme";
+        } else {
+          body.classList.add("dark-theme");
+          buttonText.innerHTML = "Light theme";
+        }
+      }
+
+      let themeButton = document.querySelector("button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
   </body>
 </html>
