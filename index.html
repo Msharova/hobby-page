@@ -5,53 +5,166 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hiking is my hobby</title>
+    <style>
+      :root {
+        --light-color: radial-gradient(
+          328px at 2.9% 15%,
+          rgb(191, 224, 251) 0%,
+          rgb(232, 233, 251) 25.8%,
+          rgb(252, 239, 250) 50.8%,
+          rgb(234, 251, 251) 77.6%,
+          rgb(240, 251, 244) 100.7%
+        );
+        --dark-color: linear-gradient(
+          109.6deg,
+          rgb(72, 200, 160) 11.2%,
+          rgb(32, 40, 48) 91.3%
+        );
+      }
+      body {
+        background: var(--light-color);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      h1 {
+        font-size: 50px;
+        margin: 0 auto;
+        max-width: 600px;
+        border: 1px solid white;
+        border-radius: 10px;
+        background: rgb(201, 252, 235);
+      }
+      img {
+        width: 100%;
+      }
+      p {
+        text-align: center;
+        margin: 20px auto;
+        font-size: 20px;
+        max-width: 600px;
+      }
+      button {
+        padding: 20px;
+        background: black;
+        color: white;
+        font-size: 12px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+      }
+      button:hover {
+        cursor: pointer;
+        background: white;
+        border: 1px solid black;
+        transition: all 150ms ease-in-out;
+        color: var(--dark-color);
+      }
+      .header {
+        display: flex;
+        justify-content: end;
+      }
+      .gallery {
+        margin: 10px auto;
+        max-width: 600px;
+      }
+      .wiki-link {
+        text-align: left;
+      }
+      .wiki-link a {
+        padding: 20px;
+        background: rgb(201, 252, 235);
+        color: black;
+        font-size: 20px;
+        border-radius: 10px;
+        border: 1px solid white;
+        text-decoration: none;
+        margin: 10px;
+      }
+      .wiki-link a:hover {
+        background: white;
+        color: black;
+        border: 1px solid black;
+        transition: all 150ms ease-in-out;
+      }
+      .footer {
+        text-align: center;
+        font-size: 20px;
+      }
+      .footer a {
+        color: rgb(0, 0, 206);
+        text-decoration: none;
+      }
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin: 10px auto;
+        max-width: 700px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <button>Dark theme</button>
-    <h1>Do you like hiking?</h1>
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/359/original/01.jpg?1672834914"
-      alt="hiking"
-    />
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/360/original/02.jpg?1672834943"
-      alt="hiking"
-    />
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/361/original/03.jpg?1672834970"
-      alt="hiking"
-    />
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/362/original/04.jpg?1672834993"
-      alt="hiking"
-    />
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/364/original/05.jpg?1672835018"
-      alt="hiking"
-    />
-    <p>
-      Hiking is a long, vigorous walk, usually on trails or footpaths in the
-      countryside. Walking for pleasure developed in Europe during the
-      eighteenth century. Religious pilgrimages have existed much longer but
-      they involve walking long distances for a spiritual purpose associated
-      with specific religions. "Hiking" is the preferred term in Canada and the
-      United States; the term "walking" is used in these regions for shorter,
-      particularly urban walks. In the United Kingdom and the Republic of
-      Ireland, the word "walking" describes all forms of walking, whether it is
-      a walk in the park or backpacking in the Alps. The word hiking is also
-      often used in the UK, along with rambling , hillwalking, and fell walking
-      (a term mostly used for hillwalking in northern England). The term
-      bushwalking is endemic to Australia, having been adopted by the Sydney
-      Bush Walkers club in 1927. In New Zealand a long, vigorous walk or hike is
-      called tramping. It is a popular activity with numerous hiking
-      organizations worldwide, and studies suggest that all forms of walking
-      have health benefits.
-      <br />
-      <a href="https://en.wikipedia.org/wiki/Hiking">Learn more on Wikipedia</a>
-    </p>
-    <p>
-      Open-source <a href="https://github.com/Msharova/hobby-page">code</a>, by
-      <a href="https://www.linkedin.com/in/mariasharova3d/">Maria Sharova</a>
-    </p>
+    <div class="header">
+      <button>Dark theme</button>
+    </div>
+    <div class="container">
+      <h1>Do you like hiking?</h1>
+      <div class="gallery">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/359/original/01.jpg?1672834914"
+          alt="hiking"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/360/original/02.jpg?1672834943"
+          alt="hiking"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/361/original/03.jpg?1672834970"
+          alt="hiking"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/362/original/04.jpg?1672834993"
+          alt="hiking"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/364/original/05.jpg?1672835018"
+          alt="hiking"
+        />
+      </div>
+      <p>
+        Hiking is a long, vigorous walk, usually on trails or footpaths in the
+        countryside. Walking for pleasure developed in Europe during the
+        eighteenth century. Religious pilgrimages have existed much longer but
+        they involve walking long distances for a spiritual purpose associated
+        with specific religions. "Hiking" is the preferred term in Canada and
+        the United States; the term "walking" is used in these regions for
+        shorter, particularly urban walks. In the United Kingdom and the
+        Republic of Ireland, the word "walking" describes all forms of walking,
+        whether it is a walk in the park or backpacking in the Alps. The word
+        hiking is also often used in the UK, along with rambling , hillwalking,
+        and fell walking (a term mostly used for hillwalking in northern
+        England). The term bushwalking is endemic to Australia, having been
+        adopted by the Sydney Bush Walkers club in 1927. In New Zealand a long,
+        vigorous walk or hike is called tramping. It is a popular activity with
+        numerous hiking organizations worldwide, and studies suggest that all
+        forms of walking have health benefits.
+        <br />
+        <br />
+        <br />
+        <span class="wiki-link">
+          <a href="https://en.wikipedia.org/wiki/Hiking" target="_blank"
+            >Wikipedia</a
+          >
+        </span>
+      </p>
+    </div>
+    <div class="footer">
+      Open-source
+      <a href="https://github.com/Msharova/hobby-page" target="_blank">code</a>,
+      by
+      <a href="https://www.linkedin.com/in/mariasharova3d/" target="_blank"
+        >Maria Sharova</a
+      >
+    </div>
   </body>
 </html>
